@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<lunyu>
+			<price>10</price>
+			<type>classical</type>
+		</lunyu>
+	</book>
+	<book>
+		<walden>
+			<price>15</price>
+			<type>country</type>
+		</walden>
+	</book>
+</books>
