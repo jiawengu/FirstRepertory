@@ -17,14 +17,19 @@ import org.apache.poi.ss.usermodel.Cell;
 
 public class XLSReader {
 	
-	@SuppressWarnings("unused")
 	private HSSFWorkbook book;
 	private HSSFSheet sheet;
 	
-	public XLSReader(HSSFWorkbook book, HSSFSheet sheet) {
-		super();
-		this.book = book;
-		this.sheet = sheet;
+	public XLSReader(String fileName, int sheetNum) {
+		try {
+			FileInputStream is = new FileInputStream(new File(fileName));
+			book = new HSSFWorkbook(is);
+			sheet = book.getSheetAt(sheetNum);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
